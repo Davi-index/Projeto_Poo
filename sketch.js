@@ -1,3 +1,5 @@
+//Variáveis
+
 let cursorImg;
 let AlvoImg;
 let meteoroImg;

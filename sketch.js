@@ -8,13 +8,13 @@ let disparo;
 let estrelas = [];
 let vida = 3;
 let pontuacao = 0;
-
+//Função de pré carregamento das imagens
 function preload() {
   meteoroImg = loadImage("asteroid.gif");
   cursorImg = loadImage("nave.png");
   AlvoImg = loadImage("navets.png");
 }
-
+//Função que gera os meteoros
 function setup() {
   createCanvas(920,600);
   noCursor();

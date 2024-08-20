@@ -34,14 +34,16 @@ function setup() {
 
 function draw() {
   background('rgb(1,1,13)');
-
+//Movimento da nave e dos meteoros
   nave.move();
   nave.display();
   meteoro.move();
   meteoro.display();
   meteoro2.move();
-  meteoro2.display();meteoro3.move();
-  meteoro3.display();meteoro4.move();
+  meteoro2.display();
+  meteoro3.move();
+  meteoro3.display();
+  meteoro4.move();
   meteoro4.display();
 
   if (disparo.ativo) {

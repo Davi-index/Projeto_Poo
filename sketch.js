@@ -49,7 +49,7 @@ function draw() {
   if (disparo.ativo) {
     disparo.move();
     disparo.display();
-    
+//Função que tira pontos de vida quando atinge a nave
     if (disparo.acertou(nave)) {
       disparo.ativo = false;
       pontuacao++;

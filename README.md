@@ -12,5 +12,5 @@ Aqui uma breve descrição sobre o game desenvolvido.
 
 #### REFERÊNCIAS
 
-*   Disponível em: [p5.js](<https://p5js.org/>). Acesso em: 20 de julho de 2024.
-*   Disponível em: [open.org](https://opengameart.org/). Acesso em: 20 de julho de 2024.
+*   Disponível em: [p5.js](<https://p5js.org/>). Acesso em: 17 de Abril de 2025.
+*   Disponível em: [open.org](https://opengameart.org/). Acesso em: 17 de Abril de 2025.

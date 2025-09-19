@@ -1,3 +1,4 @@
+package lista;
 import java.util.Scanner;
 
 public class Lista1java {
@@ -222,6 +223,310 @@ public static class questao10 {
         if (num1 <= num2) {
             System.out.println("Menor ou igual");
         }
+
+        scanner.close();
+    }
+}
+// Nível 2: Estruturas Condicionais
+// questão 1
+public static class questao01 {
+    public static void executar() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o valor de A: ");
+        int A = scanner.nextInt();
+
+        System.out.print("Digite o valor de B: ");
+        int B = scanner.nextInt();
+
+        System.out.println("Valores antes da troca:");
+        System.out.println("A = " + A + ", B = " + B);
+
+        int temp = A;
+        A = B;
+        B = temp;
+
+        System.out.println("Valores depois da troca:");
+        System.out.println("A = " + A + ", B = " + B);
+
+        scanner.close();
+    }
+}
+// questão 2
+public static class questao02 {
+    public static void executar() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite um número inteiro: ");
+        int x = scanner.nextInt();
+
+        int modulo;
+        if (x >= 0) {
+            modulo = x;
+        } else {
+            modulo = x * -1;
+        }
+
+        System.out.println("O módulo do número é: " + modulo);
+
+        scanner.close();
+    }
+}
+
+// questão 3
+public static class questao03 {
+    public static void executar() {
+        Scanner scanner = new Scanner(System.in);
+        int[] numeros = new int[5];
+
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Digite o " + (i + 1) + "º número inteiro: ");
+            numeros[i] = scanner.nextInt();
+        }
+
+        // Ordena em ordem crescente
+        java.util.Arrays.sort(numeros);
+
+        System.out.print("Ordem crescente: ");
+        for (int i = 0; i < 5; i++) {
+            System.out.print(numeros[i] + " ");
+        }
+        System.out.println();
+
+        System.out.print("Ordem decrescente: ");
+        for (int i = 4; i >= 0; i--) {
+            System.out.print(numeros[i] + " ");
+        }
+        System.out.println();
+
+        scanner.close();
+    }
+}
+// questão 4
+public static class questao04 {
+    public static void executar() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o primeiro número: ");
+        int num1 = scanner.nextInt();
+
+        System.out.print("Digite o segundo número: ");
+        int num2 = scanner.nextInt();
+
+        int maior = Math.max(num1, num2);
+        int menor = Math.min(num1, num2);
+        int diferenca = maior - menor;
+
+        System.out.println("A diferença do maior para o menor é: " + diferenca);
+
+        scanner.close();
+    }
+}
+// questão 5
+public static class questao05 {
+    public static void executar() {
+        Scanner scanner = new Scanner(System.in);
+
+        double somaNotas = 0;
+        for (int i = 1; i <= 4; i++) {
+            System.out.print("Digite a " + i + "ª nota: ");
+            somaNotas += scanner.nextDouble();
+        }
+
+        double media = somaNotas / 4;
+
+        if (media >= 7) {
+            System.out.println("Aluno aprovado! Média: " + media);
+        } else {
+            System.out.print("Média menor que 7. Digite a nota da recuperação: ");
+            double notaRecuperacao = scanner.nextDouble();
+            double novaMedia = (media + notaRecuperacao) / 2;
+
+            if (novaMedia >= 7) {
+                System.out.println("Aluno aprovado na recuperação! Média final: " + novaMedia);
+            } else {
+                System.out.println("Aluno reprovado. Média final: " + novaMedia);
+            }
+        }
+
+        scanner.close();
+    }
+}
+// questão 6
+public static class questao06 {
+    public static void executar() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o primeiro número: ");
+        double num1 = scanner.nextDouble();
+
+        System.out.print("Digite o segundo número: ");
+        double num2 = scanner.nextDouble();
+
+        if (num1 == num2) {
+            System.out.println("Os dois números são iguais: " + num1);
+        } else {
+            double maior = Math.max(num1, num2);
+            double menor = Math.min(num1, num2);
+            System.out.println("Maior número: " + maior);
+            System.out.println("Menor número: " + menor);
+        }
+
+        scanner.close();
+    }
+}
+//questão 7
+public static class questao07 {
+    public static void executar() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite um número inteiro: ");
+        try {
+            int numero = scanner.nextInt();
+
+            if (numero >= 0 && numero <= 9) {
+                System.out.println("valor válido");
+            } else {
+                System.out.println("valor inválido");
+            }
+        } catch (Exception e) {
+            System.out.println("erro");
+        }
+
+        scanner.close();
+    }
+}
+// questão 8
+public static class questao08 {
+    public static void executar() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite um número inteiro (código): ");
+        int codigo = scanner.nextInt();
+
+        switch (codigo) {
+            case 1:
+                System.out.println("um");
+                break;
+            case 2:
+                System.out.println("dois");
+                break;
+            case 3:
+                System.out.println("três");
+                break;
+            default:
+                System.out.println("Código inválido");
+        }
+
+        scanner.close();
+    }
+}
+//questão 9
+public static class questao09 {
+    public static void executar() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o valor do lado A: ");
+        double A = scanner.nextDouble();
+
+        System.out.print("Digite o valor do lado B: ");
+        double B = scanner.nextDouble();
+
+        System.out.print("Digite o valor do lado C: ");
+        double C = scanner.nextDouble();
+
+        if (A < B + C && B < A + C && C < A + B) {
+            if (A == B && B == C) {
+                System.out.println("Triângulo equilátero");
+            } else if (A == B || A == C || B == C) {
+                System.out.println("Triângulo isósceles");
+            } else {
+                System.out.println("Triângulo escaleno");
+            }
+        } else {
+            System.out.println("Os valores fornecidos não formam um triângulo.");
+        }
+
+        scanner.close();
+    }
+}
+// questão 10
+public static class questao010 {
+    public static void executar() {
+        Scanner scanner = new Scanner(System.in);
+        int a, b, c;
+
+        // Lê valor de a
+        do {
+            System.out.print("Digite o valor de a (maior que zero): ");
+            a = scanner.nextInt();
+            if (a <= 0) {
+                System.out.println("Valor inválido! Digite novamente.");
+            }
+        } while (a <= 0);
+
+        // Lê valor de b
+        do {
+            System.out.print("Digite o valor de b (maior que zero): ");
+            b = scanner.nextInt();
+            if (b <= 0) {
+                System.out.println("Valor inválido! Digite novamente.");
+            }
+        } while (b <= 0);
+
+        // Lê valor de c
+        do {
+            System.out.print("Digite o valor de c (maior que zero): ");
+            c = scanner.nextInt();
+            if (c <= 0) {
+                System.out.println("Valor inválido! Digite novamente.");
+            }
+        } while (c <= 0);
+
+        int menor = Math.min(a, Math.min(b, c));
+        int maior = Math.max(a, Math.max(b, c));
+
+        System.out.println("Menor valor multiplicado pelo maior: " + (menor * maior));
+        System.out.println("Maior valor dividido pelo menor: " + ((double)maior / menor));
+
+        scanner.close();
+    }
+}
+//qustão 11
+public static class questao11 {
+    public static void executar() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite um número inteiro: ");
+        int numero = scanner.nextInt();
+
+        if (numero >= 0) {
+            System.out.println("O número é positivo.");
+        } else {
+            System.out.println("O número é negativo.");
+        }
+
+        scanner.close();
+    }
+}
+//questao 12
+public static class questao12 {
+    public static void executar() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite um número inteiro: ");
+        int numero = scanner.nextInt();
+
+        Integer A = null;
+        Integer B = null;
+
+        if (numero >= 0) {
+            A = numero;
+        } else {
+            B = numero;
+        }
+
+        System.out.println("A: " + (A != null ? A : "null") + ", B: " + (B != null ? B : "null"));
 
         scanner.close();
     }
